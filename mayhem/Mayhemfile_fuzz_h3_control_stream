@@ -1,0 +1,9 @@
+project: savantenvs/picoquic
+target: fuzz_h3_control_stream
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_h3_control_stream/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_h3_control_stream
+    libfuzzer: true
+    timeout: 30
